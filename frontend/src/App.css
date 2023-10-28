@@ -1,0 +1,1305 @@
+body{
+    margin:0;
+    padding:0;
+    color:#212529 !important;
+  
+    /* font-family: 'Outfit', sans-serif;
+    font-family: 'Space Grotesk', sans-serif; */
+   
+    
+    
+}
+*{
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+html{
+  color: #e3e1eb;
+  /* font-family: 'Outfit', sans-serif; */
+  font-family: 'Space Grotesk', sans-serif;
+}
+.sgfont{
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+.signupbeautpage{
+    background-color: rgb(13, 9, 2);
+}
+
+
+
+.outer{
+    width:100vw;
+    height:100%;
+    margin-top: 10vh;
+
+   
+    
+    
+}
+
+.sidebar{
+    height: 100%;
+    width:16vw;
+    background-color:#0c0335;
+    
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9), rgba(2, 8, 34, 0.9)); 
+
+    position: fixed;
+    z-index: 1000;
+    border: 1px solid black;
+}
+.sidebarlist{
+    height: auto;
+    width: 100%;
+    padding: 0;
+    
+}
+.sidebarlist .item{
+    width: 100%;
+    height: 45px;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    color: #D0D4D9;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+
+    
+}
+
+.sidebarlist .item:hover {
+    cursor: pointer;
+    background-color: inherit;
+    transform: scale(1.05); /* Increase the scale value to adjust the "pop" effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow for a lifted effect */
+}
+.dp{
+    align-items: center;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.name{
+    display: flex;
+    margin-top: 2vh;
+    height: 5vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #D0D4D9;
+    font-size: large;
+    font-weight: 600;
+}
+
+.rightsection{
+    margin-left: 21vw;
+   
+}
+.divide{
+    color:#D0D4D9;
+    border:1px solid;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.ulclass{
+    font-weight: 500;
+    list-style-type: none;
+    cursor: pointer;
+    padding-top: 30px;
+
+}
+.selectimage{
+    margin-top: 20px;
+}
+.beautouter{
+    /* background-image: url("https://img.freepik.com/free-photo/blue-smooth-wall-textured-background_53876-106133.jpg?w=900&t=st=1697104029~exp=1697104629~hmac=9dccfe4a217a6cc50f13a4a940e02e8eb99acc6ade0c38d0f6260560f2213893"); */
+    /* background:linear-gradient(65deg,rgb(13, 12, 39),#114e7a); */
+    /* background: linear-gradient(65deg, rgb(13, 12, 39), #0a558a, #a3779f); */
+    /* background-image: url("https://www.shutterstock.com/shutterstock/videos/1107261555/thumb/1.jpg?ip=x480"); */
+
+    /* background-color: #b2a8a8; */
+    /* background: linear-gradient(to right, #595454, rgb(38, 44, 129)); */
+    background-color: #234E70;
+    background-color: #FFFFFF;
+    
+
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.loginbtnrow{
+    display: flex;
+    justify-content: center;
+
+  
+}
+.login-landing{
+    /* background-image: url("https://images.unsplash.com/photo-1555679427-1f6dfcce943b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"); */
+    margin-top: 64px;
+    height: 90vh;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+    padding: 20px;
+
+}
+.loginbeaut-landing{
+    /* background-image: url("https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1878&q=80"); */
+    margin-top: 64px;
+    height: 90vh;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+   
+
+}
+.logincust-landing{
+    /* background-image: url("https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1878&q=80"); */
+    margin-top: 64px;
+    height: 90vh;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+
+}
+
+
+.header{
+    width: 100%;
+    height: 10vh;
+    background-color: #0c0335;
+    
+}
+
+/* body {
+    background-color: #f0f0f0;
+} */
+
+.navbar-dark .navbar-brand {
+    color: #ffffff; /* Brand color */
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* Link color */
+}
+
+.navbtn{
+    background-color: #3bdd94;
+}
+.navbtn:hover{
+    background-color: rgb(6, 25, 25);
+    color: whitesmoke;
+
+}
+.profileimage{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;  
+    
+
+}
+.groomup {
+    text-decoration: none; 
+    color: inherit; 
+}
+.groomup:hover{
+    text-decoration: none;
+    color: inherit; 
+
+}
+
+
+.signup{
+    width:50vw;
+    height:70vh;
+    background-color: rgb(110, 97, 167);
+    margin-left: 25%;
+    margin-top: 7%;
+    border-radius: 20px;
+}
+
+.btndesign{
+    background-color: #3bdd94;
+    padding: 3vh;
+    margin-top: 10vh;
+    margin-left: 8vw;
+}
+.signupbeaut{
+    width:50vw;
+    height:90vh;
+    background-color: rgb(110, 97, 167);
+    margin-left: 25%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: 20px;
+
+}
+.content{
+    margin-left: 8vw;
+    padding-top: 10vh;
+    
+    font-size: x-large;
+    font-weight: 700;
+}
+.btnrow{
+    display: flex;
+    justify-content:center;
+    /* align-items: center; */
+    /* background-color: #3bdd94; */
+}
+.mainsignup{
+    /* background-image: url("https://img.freepik.com/free-photo/handsome-man-barber-shop-styling-hair_1303-20978.jpg?w=900&t=st=1694015109~exp=1694015709~hmac=36ced935c8582a2ec223ac33da73dd0105c513f08b57fe8f947465966b7e7fce"); */
+    margin-top: 64px;
+    height: 100%;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+
+}
+.customersignup{
+    /* background-image: url("https://img.freepik.com/free-photo/handsome-bearded-man-barbershop-barber-work_627829-7370.jpg?w=900&t=st=1694026924~exp=1694027524~hmac=b82bc3e4599b2084b1d8e6e5d31f3ed92e3f4b11416e15c4c3d70744e471265c"); */
+    margin-top: 64px;
+    height: 100%;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+    padding: 20px;
+
+}
+
+
+.style{
+    display:flex;
+}
+.dateform{
+    width: 30%;
+    
+    
+}
+.expertin {
+    /* font-family: 'Arial', sans-serif;  */
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight if desired */
+    color: #212529; /* Choose a text color */
+    text-align: center; /* Center the text horizontally */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    background-color: "inherit"; /* Add a background color */
+    padding: 10px; /* Add padding around the text */
+    border-radius: 5px; /* Round the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+    margin-right: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .expertin:hover {
+    transform: scale(1.03); /* Scale the element on hover */
+
+    color: #212529; /* Change the text color on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a larger box shadow on hover */
+  }
+
+  .expertin_minimized{
+    font-size: 10px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight if desired */
+    color: #212529; /* Choose a text color */
+    text-align: center; /* Center the text horizontally */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    background-color: "inherit"; /* Add a background color */
+    padding: 10px; /* Add padding around the text */
+    border-radius: 5px; /* Round the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+    margin-right: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .expertin:hover {
+    transform: scale(1.03); /* Scale the element on hover */
+
+    color: #212529; /* Change the text color on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a larger box shadow on hover */
+  }
+  .textclass{
+    text-transform: uppercase; 
+    letter-spacing: 2px; /* Add letter spacing for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+
+  }
+  .heading1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 28px; /* Adjust the font size as needed */
+    font-weight:bolder;
+    color: #333; /* Choose a text color */
+    margin-top: 0%; /* Add some spacing below the heading */
+     /* Center the text horizontally */
+    /* border-bottom: 2px solid #b21919; */
+    border-bottom: 2px solid #310909;
+  }
+
+  .expert{
+    color: green;
+    margin-left: 40%;
+  }
+  .intermediate{
+    color: rgb(179, 179, 124)  ;
+    margin-left: 38%;
+  }
+  .viewmorediv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .viewmorebtn {
+    margin-left: 50%;
+    margin-top: 40px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } */
+  
+  .viewmorebtn:hover {
+    background-color: #45a049;
+  }
+  
+  .home{
+    cursor: pointer;
+  }
+  .imagecls{
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 25px;
+    
+  }
+  .paper{
+    max-width: 99%;
+    max-height: 90%;
+   
+  }
+
+
+
+
+
+.maincont{
+  margin-top: 64px;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.paperesh{
+  width: 100%;
+  height: 100%;
+  
+}
+.cols{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  
+}
+.mainrow{
+  padding-top: 70px;
+}
+
+
+
+.forgotpw{
+  color: #115194;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+}
+.email{
+  font-weight: 500;
+}
+
+
+.address-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust the width to your preference */
+  }
+
+  .address-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  /* You can style individual components (locality, place, district, state) here */
+  .address-component {
+    margin-bottom: 5px;
+  }
+
+  .locality {
+    color: #333;
+  }
+
+  .place {
+    color: #333;
+  }
+
+  .district {
+    color: #333;
+  }
+
+  .state {
+    color: #333;
+  }
+
+
+
+  .maindiv{
+    margin-left:"300px";
+
+}
+.profile-outer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+.profile-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.heading{
+    font-size: 40px;
+    margin-left: 10vw;
+    margin-top: 50px;
+
+}
+
+
+.stackdiv{
+    font-size: 30px;
+    margin-left: 40px;
+
+}
+.titles{
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 1%;
+
+}
+            
+.values{
+    font-size: 20px;
+    margin-left: 2%;
+    margin-top: 1%;
+    
+
+}
+
+
+.services-outer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.services-box{
+    /* border-left: 1.3px solid black; */
+    /* border-bottom: 1.3px solid black; */
+    
+    width:40vw;
+    height:70vh;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+
+    transition: box-shadow 0.3s ease;
+    background-color:"transparent";
+    color: #D0D4D9;
+    /* border-radius: 7px; */
+    margin-bottom: 5vh;
+}
+.services-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #212529;
+
+
+
+}
+
+
+.getstartedbtn{
+    
+    text-transform: 'none';
+    font-size: 16;
+    padding: '6px 12px';
+    border: '1px solid';
+    line-height: 1.5;
+    background-color: '#0063cc';
+    border-color: '#0063cc';
+    background-color:"purple";
+    padding:"20px";
+    margin-left:"40px";
+    margin-top:"20px";
+
+}
+
+.landing{
+    /* background-image: url("https://images.unsplash.com/photo-1620331309205-b5a4669ac526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"); */
+    margin-top: 64px;
+    height: 89vh;
+    background-size: cover; /* Ensures the entire image is covered within the container */
+    background-position: center;
+}
+
+.getstarted{
+    text-decoration: none;
+    color: white;
+}
+
+
+.landouter{
+    height: 100vh;
+    
+}
+.hero{
+   
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    
+    
+    
+}
+
+
+
+.team {
+  height: 100%;
+  width: 100%; /* Set a specific width for your cards */
+  background-color: #ffffff; /* Card background color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+
+  /* Other styles for your cards go here */
+
+  /* Hover effect and popup */
+  transform: scale(1); /* Initial scale value for the cards */
+}
+
+.team:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.05); /* Enlarge the card on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Optional: Add styles for the popup */
+.team .popup {
+  display: none; /* Initially hide the popup */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially set the opacity to 0 (fully transparent) */
+  transition: opacity 0.5s ease; /* Apply smooth transition effect to the opacity property */
+  /* Other styles for the popup content go here */
+}
+
+.team:hover .popup {
+  display: block; /* Show the popup on card hover */
+  opacity: 1; /* Set the opacity to 1 (fully visible) to make it appear slowly */
+}
+
+
+
+
+.team .items {
+    transition: 0.5s;
+    height: 100%;
+  }
+  /* .team .img {
+    position: relative;
+  }
+  .team img {
+    width: 100%;
+    height: 100%;
+  } */
+  /* .overlay {
+    position: absolute;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .overlay i {
+    background-color: #000;
+    color: #fff;
+    margin: 5px;
+    transition: 0.5s;
+  }
+  .team .details {
+    padding: 30px;
+    text-align: center;
+  }
+  .team .details h2 {
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .team .details p {
+    font-size: 15px;
+    color: grey;
+    margin-top: 10px;
+    transition: 0.5s;
+  } */
+  .team .items:hover {
+    background-color: #231b8a;
+    color: #fff;
+    cursor: pointer;
+  }
+  .team .items:hover p {
+    color: #fff;
+  }
+  .team .items:hover .overlay {
+    opacity: 1;
+  }
+  .team .items:hover .overlay i:hover {
+    background-color: #230246;
+    color: #fff;
+  }
+  
+  .btn-class{
+    color:inherit;
+    background-color: inherit;
+    
+  }
+
+  .btn-class:hover {
+    color: white;
+  }
+ 
+
+  .schedule-outer{
+    
+    width:79vw;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.schedule-box{
+    border: 1px solid black;
+    
+    width:40vw;
+    height:70vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    transition: box-shadow 0.3s ease;
+    background-color:"transparent";
+    color: #D0D4D9;
+    border-radius: 7px;
+
+
+
+}
+
+.schedule-box:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Changes shadow on hover for interactive effect */
+    /* background-color: #1D364D; */
+}
+
+.schedule-box .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    font-size:14px;
+    font-weight: 600;
+}
+
+.schedule-box .top .headingg{
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+.schedule-box .top .datee{
+    display: flex;
+    justify-content: end;
+
+}
+.no-schedule{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 600;
+    height: 30vh
+}
+
+
+.maindiv{
+    
+    background-image: url("https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    height:100vh;
+}
+/* .fppaper {
+
+    background-color:rgba(221, 193, 193, 0.3);
+    padding: 10px;
+    
+   
+    
+} */
+.form-main-div{
+    margin: 40px;
+
+}
+.head{
+    margin-left: 25%;
+    margin-bottom: 5%;
+    padding-top: 2%;
+}
+.title{
+    font-weight: 600;
+}
+.inp{
+    border-color: black;
+}
+.btndiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+
+.headerAd{
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(177, 101, 139);
+    color: #d4eae0;
+    padding-top: 1vh;
+}
+
+/* body {
+    background-color: #f0f0f0;
+} */
+
+.navbar-dark .navbar-brand {
+    color: #ffffff; /* Brand color */
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* Link color */
+}
+
+.navbtnAd{
+    background-color: #d0eadf;
+}
+.navbtn:hover{
+    background-color: rgb(6, 25, 25);
+    color: whitesmoke;
+
+}
+.profileimage{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;  
+    
+
+}
+/* .prev-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+} */
+
+.prev-content .part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+   
+   
+
+}
+
+/* .prev-content .part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+
+} */
+
+.flex{
+    display: flex ;
+    flex-direction: row;
+   
+}
+.inputform{
+    background-color: inherit;
+    cursor: pointer;
+    border: 1px solid black;
+}
+/* .booknow-outer .box{
+    border: 1px solid black;
+    padding: 5vw;
+    border-radius: 7px;
+} */
+
+.title{
+    font-size: 500;
+    font-size: 17px;
+    
+}
+
+.booknow-outer .box{
+    width: 55vw;
+  
+}
+.booking-completed-box{
+    margin-top: 10vh;
+    width: 70vw;
+    height: 70vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.booking-completed-box .title{
+    font-size: 30px;
+    font-size: 800;
+
+}
+.booking-completed-box .description{
+    font-size: 20px;
+    font-size: 800;
+
+}
+
+.booking-completed-box .more-description{
+    font-size: 17px;
+    font-size: 600;
+
+}
+.booking-completed-box .thankyou{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4vh;
+
+
+
+}
+
+.booking-completed-box:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Changes shadow on hover for interactive effect */
+    /* background-color: #1D364D; */
+}
+.booking-outer .box{
+    width: 90%;
+    height:90%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.booking-outer .card{
+    display: flex;
+    width:80%;
+    height:30vh;
+    border: 1px solid black;
+    background-color: inherit;
+
+
+}
+.booking-outer .value{
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+/* Hannahs Css */
+
+.aboutHome {
+    height: auto;
+
+  }
+  .aboutHome #heading {
+    text-align: left;
+    padding: 0;
+  }
+  .aboutHome .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* .aboutHome .right {
+    padding: 80px 50px;
+  } */
+  /* .aboutHome .items {
+    margin-top: 50px;
+  } */
+  .aboutHome .item {
+    background-color: inherit;
+    width: 40vw;
+    margin-bottom: 3vh;
+    margin-top: 30px;
+    padding: 20px;
+    transition: 0.5s;
+  }
+  .aboutHome .img {
+    width: 200px;
+  }
+  .aboutHome img {
+    width: 120px;
+    height: 120px;
+    border-radius: 3px;
+  }
+  .aboutHome .item h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .aboutHome .item p {
+    color: rgb(31, 30, 30);
+  }
+  .aboutHome .item:hover {
+    background-color: #959bb2;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  }
+  .aboutHome .item:hover p {
+    color: #fff;
+  }
+  @media screen and (max-width: 768px) {
+
+    .aboutHome .container {
+      flex-direction: column-reverse;
+    }
+    .aboutHome .row {
+      width: 100%;
+    }
+  }
+
+  .flexSB {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+
+  /* Hannahs Css */
+
+
+  .countmaindiv{
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .countdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 30vh;
+    /* background: linear-gradient(to right, #3498db, #6d7087); */
+    background-color: #0C0335;
+    /* background: linear-gradient(to right, rgba(17, 17, 17, 0.9), rgba(2, 8, 34, 0.9)); */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding: 20px;
+    transition: background 0.3s ease; /* Add a smooth transition effect */
+}
+
+.countdiv:hover {
+    background: linear-gradient(to right, #6d7087, #3498db);
+}
+.wallet-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.previous-booking{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.booking-hero{
+   
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    cursor:pointer;
+    
+    
+    
+}
+.review-outer{
+ 
+  overflow: auto;
+  height: 40vh;
+}
+.review-outer .box{
+  margin-left: 3vw;
+  margin-top: 3vh;
+  border: 1px solid black;
+  padding: 2vh;
+  padding-bottom: 5vh;
+  transition: border-color 0.3s ease;
+  border-radius: 5px;
+
+}
+.review-outer .box:hover {
+  border-color: black; /* Change border color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow on hover for a lifted effect */
+}
+.review-toggle{
+  display: flex;
+  justify-content: center;
+}
+.booknow-outer .toggle-buttons{
+  display: flex;
+  justify-content: center;
+}
+.booknow-outer .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-btns{
+  display: flex;
+  justify-content: space-around;
+}
+.intermediates-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+.sub-heading {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  /* Adding default underline style */
+  text-decoration: underline;
+  /* Setting color to specify the underline color */
+  color: #000; /* You can set the color according to your design */
+  /* Adding transition for smooth animation */
+  transition: text-decoration 0.5s ease;
+}
+.studio-outer .outerbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.studio-outer .box{
+  height: 30vh;
+  width: 40vw;
+  border: 2px solid black;
+  font-size: 17px;
+  font-weight: 600;
+
+}
+.add-studio{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* utilities */
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-center{
+  justify-content: center;
+}
+.justify-around{
+  justify-content: space-around;
+}
+.justify-between{
+  justify-content: space-between;
+}
+html{
+  background-color: #ffffff !important;
+}
+.align-center{
+  align-items: center;
+}
+
+.py-3{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+.text-large{
+  font-size: 3rem;
+}
+.text-medium{
+  font-size: 2rem;
+}
+.text-small{
+  font-size: 1.2rem;
+}
+
+.fw-1{
+  font-weight: 400;
+}
+.fw-2{
+  font-weight: 500;
+}
+.fw-3{
+  font-weight: 600;
+}
+.fw-4{
+  font-weight: 700;
+}
+.fw-5{
+  font-weight: 800;
+}
+.title1{
+  font-size: 17px;
+}
+.allservices{
+  color: #230246;
+  text-decoration: underline;
+}
+.themecolor{
+  color:#0C0335
+}
+.underline{
+  text-decoration: underline;
+}
+.max-w{
+  width: 50vw;
+}
+.border-b1{
+  border-bottom: 1px solid black;
+
+
+
+}
+.border-b2{
+  border-bottom: 2px solid black;
+  width: 70%;
+  margin-left: 15%;
+
+}
+.justify-end{
+  justify-content: end;
+}
+.cur{
+  cursor: pointer;
+}
+.mart{
+  margin-top: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
