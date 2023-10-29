@@ -38,7 +38,7 @@ const Landingbody = () => {
           <div className="content flex justify-center">
             Find the best beauticians in Town!
             <br />
-            Book Appointments Now..
+            Book Appointments Now
             <br />
            
           </div>
