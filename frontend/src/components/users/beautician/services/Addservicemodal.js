@@ -137,7 +137,7 @@ const Addservicemodal = () => {
                 placeholder="Enter Fee"
                 onChange={(e) =>{
                     const val=e.target.value
-                    const regex = /^[0-9]+$/;   
+                    const regex = /^[1-9][0-9]*$/;   
                     if (regex.test(val)){
                         setServiceFee(e.target.value)
                         setServiceFeeError(false)
