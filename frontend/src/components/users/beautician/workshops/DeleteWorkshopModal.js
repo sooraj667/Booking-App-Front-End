@@ -11,6 +11,7 @@ import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import axiosInstance from '../../../../axios/axiosconfig';
 import { useSelector, useDispatch } from "react-redux";
 import { setAllWorkshops } from '../../../../feautures/beautician/workshopslice';
+import toast from 'react-hot-toast';
 
 
 
@@ -26,6 +27,7 @@ const DeleteWorkshopModal = (props) => {
         axiosInstance.post("beaut/cancel-workshop/",datas).then((response)=>{
             dispatch(setAllWorkshops(response.data.allworkshops))
             setOpen(false)
+            toast.success("Workshop Deleted") 
             
         }).catch((error)=>{
             alert(error)

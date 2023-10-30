@@ -251,7 +251,7 @@ const Workshops = () => {
                   <Avatar src="/static/images/avatar/2.jpg" />
                   <Avatar src="/static/images/avatar/3.jpg" />
                   <Avatar src="/static/images/avatar/4.jpg" />
-                  <Avatar>+4K</Avatar>
+                  <Avatar>+4K</Avatar> 
                 </AvatarGroup>
               </Box>
               <CardContent>

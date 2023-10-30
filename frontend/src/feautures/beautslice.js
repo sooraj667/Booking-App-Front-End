@@ -36,7 +36,7 @@ const beautslice=createSlice(
               
             
                     
-                if (!/^[a-zA-Z ]+$/.test(action.payload)){
+                if (!/^[a-zA-Z][a-zA-Z ]*$/.test(action.payload)){
                     state.value.error.pname="Name can only have alphabets!"
                     state.value.error.submiterror=null
                     state.value.errorcheck=true
