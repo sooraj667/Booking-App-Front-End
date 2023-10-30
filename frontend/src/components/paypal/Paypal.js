@@ -349,9 +349,15 @@ const Paypal = () => {
               )
             }
 
+            { dateError || slotNotAvailable ? ""
+            :
             <Razorpay fee={selectedFeeForPayment} for="normal" id="nil"/>
+
+            }
+
+            
         
-      </Card>
+      </Card> 
 
       
       
