@@ -167,7 +167,7 @@ const WorkShopBookingFullScreenDialog = (props) => {
                         });
 
                       setTimeout(
-                        navigate("../workshop-booking-completed"),
+                        navigate("../workshop-booking-completed"), 
                         2000
                       ).catch((error) => alert(error));
                     }}

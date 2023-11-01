@@ -99,7 +99,7 @@ const CancelledWorkshopBookings = () => {
                       </Typography>
                     </AspectRatio>
 
-                    <Button color="danger">Rate</Button>
+                  
                   </Card>
                 </Stack>
               </div>
