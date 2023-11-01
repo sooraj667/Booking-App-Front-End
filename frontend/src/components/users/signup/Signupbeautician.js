@@ -17,12 +17,14 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 const Signupbeautician = () => {
+
   const formdatas = useSelector((state) => state.signup);
   const [alreadyTaken, setAlreadyTaken] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
+    const toastId = toast.loading("Signing UP..Please Wait");
     dispatch(submitForm());
     if (formdatas.value.error.submiterror) {
       toast.error("ERROR");
@@ -58,7 +60,8 @@ const Signupbeautician = () => {
         console.log("SUCCESSFULL");
         console.log(response.data);
         dispatch(setBeautotp());
-        toast.success("Otp Sent to your mail! Check");
+        toast.dismiss(toastId);
+        toast.success("Otp Sent to your mail! Please Check");
         setTimeout(() => {
           navigate("../otp/");
         }, 3000);

@@ -24,6 +24,7 @@ const Signupcustomer = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
+    const toastId = toast.loading("Signing UP..Please Wait");
     dispatch(submitForm());
 
     console.log(formdatas.value.error.submiterror, "GGG");
@@ -50,7 +51,8 @@ const Signupcustomer = () => {
     axiosInstance
       .post("cust/signup/", datas)
       .then((response) => {
-        if (response.data.message === "Email-Failed") {
+        toast.dismiss(toastId);
+        if (response.data.message === "Email-Failed") { 
           setAlreadyTaken("Email already taken!");
           return;
         }
@@ -61,7 +63,7 @@ const Signupcustomer = () => {
         }
         console.log("SUCCESSFULL");
         dispatch(setCustotp());
-        toast.success("Otp Sent to your mail! Check");
+        toast.success("Otp Sent to your mail! Please Check");
         setTimeout(() => {
           navigate("../otp/");
         }, 3000);

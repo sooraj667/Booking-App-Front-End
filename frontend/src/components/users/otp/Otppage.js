@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axiosInstance from "../../../axios/axiosconfig";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -18,8 +18,9 @@ const Otppage = () => {
   const otpdatas = useSelector((state) => state.otp);
   const signupdatas = useSelector((state) => state.signup);
   const [error, setError] = useState(false);
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(20);
   const [timeover, setTimeOver] = useState(false);
+  const [reRender, setReRender] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = () => {
     const datas = {
@@ -38,7 +39,8 @@ const Otppage = () => {
               navigate("../loginbeautician/");
             }, 3000);
           } else {
-            setError(true);
+            toast.error("Invalid OTP!")
+            //setError(true);
           }
         })
         .catch((error) => alert(error));
@@ -55,7 +57,8 @@ const Otppage = () => {
               navigate("../logincustomer/");
             }, 3000);
           } else {
-            setError(true);
+            toast.error("Invalid OTP!")
+            //setError(true);
           }
         })
         .catch((error) => alert(error));
@@ -63,6 +66,7 @@ const Otppage = () => {
   };
 
   useEffect(() => {
+    
     if (seconds > 0) {
       const timer = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
@@ -70,19 +74,58 @@ const Otppage = () => {
 
       return () => {
         clearInterval(timer); 
-       // Cleanup the interval on component unmount
+        // Cleanup the interval on component unmount
       };
+    } else {
+      setTimeOver("Time Over");
+
+      return;
     }
-    else {
-      setTimeOver("Time Over")
-      
-      return
+  }, [seconds,reRender]);
 
+  const resendOTPHandle = () => {
+    const toastId = toast.loading("Resending OTP to your mail...Please Wait");
+    if (otpdatas.value.beautotpstatus == true) {
+      const datas = {
+        email: signupdatas.value.email,
+      };
+      axiosInstance
+        .post("beaut/resendotp/", datas)
+        .then((response) => {
+          toast.dismiss(toastId);
+          toast.success("OTP sent to your mail! Please check");
+          setTimeOver(false)
+          setSeconds(20)
+          setReRender(!reRender)
+          
+        })
+        .catch((error) => {
+          alert(error);
+        });
     }
-  }, [seconds]);
 
 
-  
+    if (otpdatas.value.custotpstatus == true) {
+      const datas = {
+        email: signupdatas.value.email,
+      };
+      axiosInstance
+        .post("cust/resendotp/", datas)
+        .then((response) => {
+          toast.dismiss(toastId);
+          toast.success("OTP sent to your mail! Please check");
+          setTimeOver(false)
+          setSeconds(20)
+          setReRender(!reRender)
+        })
+        .catch((error) => {
+          alert(error);
+        });
+    }
+
+
+  };
+
   return (
     <div>
       <Toaster />
@@ -117,53 +160,36 @@ const Otppage = () => {
                     <h3 class="text-center">OTP</h3>
                   </div>
                   <Otpform />
-                  {
-                    !timeover ? (
-                      <Button
-                    variant="contained"
-                    onClick={handleSubmit}
-                    sx={{
-                      marginLeft: "80px",
-                    }}
-                  >
-                    Submit
-                  </Button>
-                    ):
+                  {!timeover ? (
                     <Button
-                    variant="contained"
-                    
+                      variant="contained"
+                      onClick={handleSubmit}
+                      sx={{
+                        marginLeft: "80px",
+                      }}
+                    >
+                      Submit
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      onClick={resendOTPHandle}
+                      sx={{
+                        marginLeft: "80px",
+                        backgroundColor: "green",
+                      }}
+                    >
+                      Resend OTP
+                    </Button>
+                  )}
 
-                    // onClick={handleSubmit}
-                    sx={{
-                      marginLeft: "80px",
-                      backgroundColor:"green",
-                    }}
-                  >
-                    Resend OTP
-                  </Button>
-
-                  }
-
-                  {
-                    timeover ? (
-                      <div className="text-danger justify-center ml-5 mt-2">
-                       
-
-                      </div> 
-
-                    ):(
-                      <div className="text-danger flex justify-center ml-4 mt-2">
+                  {timeover ? (
+                    <div className="text-danger justify-center ml-5 mt-2"></div>
+                  ) : (
+                    <div className="text-danger flex justify-center ml-4 mt-2">
                       Resend OTP in {seconds} seconds
-  
                     </div>
-
-                    )
-                  }
-
-                 
-
-                  
-                  
+                  )}
 
                   {error && (
                     <Alert
