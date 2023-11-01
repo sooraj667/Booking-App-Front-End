@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axiosInstance from "../../../axios/axiosconfig";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -18,6 +18,8 @@ const Otppage = () => {
   const otpdatas = useSelector((state) => state.otp);
   const signupdatas = useSelector((state) => state.signup);
   const [error, setError] = useState(false);
+  const [seconds, setSeconds] = useState(5);
+  const [timeover, setTimeOver] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = () => {
     const datas = {
@@ -59,6 +61,28 @@ const Otppage = () => {
         .catch((error) => alert(error));
     }
   };
+
+  useEffect(() => {
+    if (seconds > 0) {
+      const timer = setInterval(() => {
+        setSeconds((prevSeconds) => prevSeconds - 1);
+      }, 1000);
+
+      return () => {
+        clearInterval(timer); 
+       // Cleanup the interval on component unmount
+      };
+    }
+    else {
+      setTimeOver("Time Over")
+      
+      return
+
+    }
+  }, [seconds]);
+
+
+  
   return (
     <div>
       <Toaster />
@@ -93,7 +117,9 @@ const Otppage = () => {
                     <h3 class="text-center">OTP</h3>
                   </div>
                   <Otpform />
-                  <Button
+                  {
+                    !timeover ? (
+                      <Button
                     variant="contained"
                     onClick={handleSubmit}
                     sx={{
@@ -102,6 +128,42 @@ const Otppage = () => {
                   >
                     Submit
                   </Button>
+                    ):
+                    <Button
+                    variant="contained"
+                    
+
+                    // onClick={handleSubmit}
+                    sx={{
+                      marginLeft: "80px",
+                      backgroundColor:"green",
+                    }}
+                  >
+                    Resend OTP
+                  </Button>
+
+                  }
+
+                  {
+                    timeover ? (
+                      <div className="text-danger justify-center ml-5 mt-2">
+                       
+
+                      </div> 
+
+                    ):(
+                      <div className="text-danger flex justify-center ml-4 mt-2">
+                      Resend OTP in {seconds} seconds
+  
+                    </div>
+
+                    )
+                  }
+
+                 
+
+                  
+                  
 
                   {error && (
                     <Alert
