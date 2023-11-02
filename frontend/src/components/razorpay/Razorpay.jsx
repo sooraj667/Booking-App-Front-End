@@ -80,7 +80,7 @@ const Razorpay = (props) => {
               console.log(response, "RESRERSRERSRERSR");
             });
 
-            navigate("../workshop-booking-completed");
+            navigate("../booking-completed");
           }
           if (props.for === "workshop") {
             const datas = {
@@ -95,7 +95,7 @@ const Razorpay = (props) => {
               console.log(response, "RESRERSRERSRERSR");
             });
 
-            navigate("../workshop-booking-completed");
+            navigate("../booking-completed");  
           }
         },
         prefill: {
