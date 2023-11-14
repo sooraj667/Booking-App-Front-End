@@ -51,7 +51,7 @@ const AllWorkshops = () => {
                 sx={{
                   width: 380,
                   // to make the card resizable
-                  overflow: "auto",
+                  overflow: "",
                   resize: "horizontal",
                   margin: 2,
                 }}

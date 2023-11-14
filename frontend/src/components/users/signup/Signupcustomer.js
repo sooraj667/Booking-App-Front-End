@@ -45,6 +45,7 @@ const Signupcustomer = () => {
       formdatas.value.password === ""
     ) {
       setSignupError(true);
+      toast.dismiss(toastId);
       return;
     }
 
@@ -54,11 +55,13 @@ const Signupcustomer = () => {
         toast.dismiss(toastId);
         if (response.data.message === "Email-Failed") { 
           setAlreadyTaken("Email already taken!");
+          toast.dismiss(toastId);
           return;
         }
 
         if (response.data.message === "Phone-Failed") {
           setAlreadyTaken("Phone number already taken!");
+          toast.dismiss(toastId);
           return;
         }
         console.log("SUCCESSFULL");

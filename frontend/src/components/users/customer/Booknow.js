@@ -244,13 +244,14 @@ const Booknow = () => {
           <Review />
         </div>
       )}
+     
 
       {workshopToggle && (
         <div className="review">
           <BeautWorkshops />
         </div>
       )}
-    </div>
+    </div> 
   );
 };
 

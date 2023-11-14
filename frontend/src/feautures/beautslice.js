@@ -12,6 +12,7 @@ const INITIALSTATE={
             pname:null,
             email:null,
             phone:null,
+            password:null,
             cpassword:null,
             submiterror:null,
 
@@ -86,7 +87,22 @@ const beautslice=createSlice(
                 
             },
             changePassword:(state,action)=>{
-                state.value.password=action.payload
+                if(!/[!@#$%^&*(),.?":{}|<>]/.test(action.payload) || (action.payload).length<8 ){
+                    state.value.error.password="Invalid Password"
+                    state.value.error.submiterror=null
+                    state.value.errorcheck=true
+
+                }
+                else{
+                    state.value.password=action.payload
+                    state.value.error.password=null
+                    state.value.errorcheck=false
+
+                }
+
+
+
+                
             },
             changeCpassword:(state,action)=>{
                 if(action.payload!==state.value.password){

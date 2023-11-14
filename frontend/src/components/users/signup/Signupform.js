@@ -11,6 +11,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CircleIcon from '@mui/icons-material/Circle';
 
 import {
   changePName,
@@ -111,6 +112,9 @@ const Signupform = () => {
                   autoComplete="new-password"
                   onChange={(e) => dispatch(changePassword(e.target.value))}
                 />
+                <span className="text-danger">{datas.value.error.password}</span>  
+                {datas.value.error.password && <span className="text-success"> <br /> Password should be atleast 8 characters <br /> Also should contain a symbol</span>  }
+                
               </Grid>
 
               <Grid item xs={12}>
@@ -118,7 +122,7 @@ const Signupform = () => {
                   required
                   fullWidth
                   name="password"
-                  label="Re-enter Password"
+                  label="Re-enter Password" 
                   type="password"
                   id="password"
                   autoComplete="new-password"

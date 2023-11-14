@@ -42,6 +42,7 @@ const Signupbeautician = () => {
       formdatas.value.phone === "" ||
       formdatas.value.password === ""
     ) {
+      toast.dismiss(toastId);
       return;
     }
     axiosInstance
@@ -49,11 +50,13 @@ const Signupbeautician = () => {
       .then((response) => {
         if (response.data.message === "Email-Failed") {
           setAlreadyTaken("Email already taken!");
+          toast.dismiss(toastId);
           return;
         }
 
         if (response.data.message === "Phone-Failed") {
           setAlreadyTaken("Phone number already taken!");
+          toast.dismiss(toastId);
           return;
         }
 

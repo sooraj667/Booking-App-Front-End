@@ -10,7 +10,7 @@ import { setAllservices, setServices } from "../../../../feautures/loginslice";
 import axiosInstance from "../../../../axios/axiosconfig";
 import Input from "@mui/joy/Input";
 import MuiAlert from "@mui/material/Alert";
-import toast from "react-hot-toast";
+import toast,{Toaster} from "react-hot-toast";
 
 const style = {
   position: "absolute",
@@ -60,7 +60,7 @@ const Addservicemodal = () => {
   }, [changed]);
 
   const handleAddService = () => {
-    if (selectedService===false || serviceFee ===false){
+    if (selectedService===false || serviceFee ===false || selectedService=="Choose Service"){
       toast.error("Please add the values!")
       return
     }
@@ -86,6 +86,7 @@ const Addservicemodal = () => {
   };
   return (
     <div>
+      <Toaster/>
       <Button
         onClick={handleOpen}
         variant="contained"
@@ -120,14 +121,23 @@ const Addservicemodal = () => {
               <select
                 id="mySelect"
                 name="fruit"
+              
                 className="form-control"
                 onChange={(e) => {
-                  setSelectedService(e.target.value);
-                  console.log(selectedService, "*********************");
+                  setSelectedService(e.target.value); 
+                  console.log(selectedService, "*********************"); 
                 }}
               >
+                 <option>Choose Service</option> 
                 {statedatas.value.allservices.map((item) => {
-                  return <option>{item.name}</option>;
+                   
+                  return(
+                  <>
+                  
+                    <option>{item.name}</option>
+                  </>
+                
+                  )  
                 })}
               </select>
               <label className="mt-4">Fee</label>

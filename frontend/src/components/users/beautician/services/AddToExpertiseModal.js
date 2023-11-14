@@ -13,6 +13,7 @@ import MuiAlert from "@mui/material/Alert";
 import {setServices} from "../../../../feautures/loginslice"
 import { useDispatch } from 'react-redux';
 import EditIcon from '@mui/icons-material/Edit';
+import CheckIcon from '@mui/icons-material/Check';
 const AddToExpertiseModal = (props) => {
     const [open, setOpen] = useState(false);
     const [changed, setChanged] = useState(false);
@@ -68,7 +69,7 @@ const AddToExpertiseModal = (props) => {
         } }
       
       >
-        <EditIcon/>
+        MAKE AS EXPERTISE <CheckIcon/>
       </Button>
       <Toaster />
 

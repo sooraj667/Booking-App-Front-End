@@ -94,7 +94,11 @@ const Review = () => {
             );
           })
         ) : (
-          <h2>No reviews Yet!</h2>
+          <>
+          <div class="flex justify-center align-center py-3 text-small fw-2 sgfont  themecolor  ">No reviews Yet!</div>
+         
+          </>
+          
         )}
       </div>
     </div>
